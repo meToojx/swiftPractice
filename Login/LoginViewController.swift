@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginAction(_ sender: UIButton) {
         let currentType = checkLoginMessage()
-//        showAlertView(alertType: currentType)
+        showAlertView(alertType: currentType)
         userDefaults.set(mailTextField.text, forKey: "mail")
         userDefaults.set(passwordTextFiled.text, forKey: "passWord")
         let loginInfoMessage = LoginInfo(mailInfo: mailTextField.text ?? "", passWordInfo: passwordTextFiled.text ?? "")
@@ -116,6 +116,13 @@ class LoginViewController: UIViewController {
             if alertType == .passWordError {
                 self.mailTextField.text?.removeAll()
                 self.passwordTextFiled.text?.removeAll()
+            }
+            if alertType == .succes {
+                // Login是 storyboard的文件名
+                let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+                // canScroll是 UIviewController的ID名
+                let viewController = storyBoard.instantiateViewController(identifier: "canScroll") as! CanScrollViewController
+                self.navigationController?.pushViewController(viewController, animated: true)
             }
         })
         alertController.addAction(action)

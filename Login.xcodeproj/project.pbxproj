@@ -21,6 +21,9 @@
 		254DB3082B78680B00B0B76B /* EnumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB3072B78680A00B0B76B /* EnumType.swift */; };
 		254DB30A2B7893B500B0B76B /* ImageChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB3092B7893B500B0B76B /* ImageChangeViewController.swift */; };
 		254DB30E2B7CDB7300B0B76B /* CanScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB30D2B7CDB7300B0B76B /* CanScrollViewController.swift */; };
+		254DB31A2B80727400B0B76B /* MainChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB3192B80727400B0B76B /* MainChatListTableViewCell.swift */; };
+		254DB31D2B8083E100B0B76B /* ConnectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB31B2B8083E100B0B76B /* ConnectTableViewCell.swift */; };
+		254DB31E2B8083E100B0B76B /* ConnectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 254DB31C2B8083E100B0B76B /* ConnectTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		254DB3072B78680A00B0B76B /* EnumType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumType.swift; sourceTree = "<group>"; };
 		254DB3092B7893B500B0B76B /* ImageChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChangeViewController.swift; sourceTree = "<group>"; };
 		254DB30D2B7CDB7300B0B76B /* CanScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanScrollViewController.swift; sourceTree = "<group>"; };
+		254DB3192B80727400B0B76B /* MainChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatListTableViewCell.swift; sourceTree = "<group>"; };
+		254DB31B2B8083E100B0B76B /* ConnectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectTableViewCell.swift; sourceTree = "<group>"; };
+		254DB31C2B8083E100B0B76B /* ConnectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,9 @@
 				254DB2FF2B76EFB900B0B76B /* LoginViewController.swift */,
 				254DB3012B76EFC500B0B76B /* Login.storyboard */,
 				254DB30D2B7CDB7300B0B76B /* CanScrollViewController.swift */,
+				254DB31B2B8083E100B0B76B /* ConnectTableViewCell.swift */,
+				254DB31C2B8083E100B0B76B /* ConnectTableViewCell.xib */,
+				254DB3192B80727400B0B76B /* MainChatListTableViewCell.swift */,
 				254DB3092B7893B500B0B76B /* ImageChangeViewController.swift */,
 				254DB3032B772FF800B0B76B /* CalculatorViewController.swift */,
 				254DB2D82B76EF0A00B0B76B /* Assets.xcassets */,
@@ -248,6 +257,7 @@
 			files = (
 				254DB2DC2B76EF0A00B0B76B /* LaunchScreen.storyboard in Resources */,
 				254DB2D92B76EF0A00B0B76B /* Assets.xcassets in Resources */,
+				254DB31E2B8083E100B0B76B /* ConnectTableViewCell.xib in Resources */,
 				254DB3022B76EFC500B0B76B /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,9 +285,11 @@
 			files = (
 				254DB30E2B7CDB7300B0B76B /* CanScrollViewController.swift in Sources */,
 				254DB3062B7867D700B0B76B /* Model.swift in Sources */,
+				254DB31A2B80727400B0B76B /* MainChatListTableViewCell.swift in Sources */,
 				254DB3002B76EFB900B0B76B /* LoginViewController.swift in Sources */,
 				254DB3082B78680B00B0B76B /* EnumType.swift in Sources */,
 				254DB2D02B76EF0800B0B76B /* AppDelegate.swift in Sources */,
+				254DB31D2B8083E100B0B76B /* ConnectTableViewCell.swift in Sources */,
 				254DB3042B772FF800B0B76B /* CalculatorViewController.swift in Sources */,
 				254DB2D22B76EF0800B0B76B /* SceneDelegate.swift in Sources */,
 				254DB30A2B7893B500B0B76B /* ImageChangeViewController.swift in Sources */,
