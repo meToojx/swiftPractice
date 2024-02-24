@@ -24,6 +24,10 @@
 		254DB31A2B80727400B0B76B /* MainChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB3192B80727400B0B76B /* MainChatListTableViewCell.swift */; };
 		254DB31D2B8083E100B0B76B /* ConnectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB31B2B8083E100B0B76B /* ConnectTableViewCell.swift */; };
 		254DB31E2B8083E100B0B76B /* ConnectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 254DB31C2B8083E100B0B76B /* ConnectTableViewCell.xib */; };
+		254DB3262B81A33500B0B76B /* MeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB3242B81A33500B0B76B /* MeTableViewCell.swift */; };
+		254DB3272B81A33500B0B76B /* MeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 254DB3252B81A33500B0B76B /* MeTableViewCell.xib */; };
+		254DB3292B81A68600B0B76B /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB3282B81A68600B0B76B /* MyViewController.swift */; };
+		254DB32D2B897C2500B0B76B /* MainChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB32C2B897C2500B0B76B /* MainChatViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		254DB3192B80727400B0B76B /* MainChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatListTableViewCell.swift; sourceTree = "<group>"; };
 		254DB31B2B8083E100B0B76B /* ConnectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectTableViewCell.swift; sourceTree = "<group>"; };
 		254DB31C2B8083E100B0B76B /* ConnectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectTableViewCell.xib; sourceTree = "<group>"; };
+		254DB3242B81A33500B0B76B /* MeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeTableViewCell.swift; sourceTree = "<group>"; };
+		254DB3252B81A33500B0B76B /* MeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeTableViewCell.xib; sourceTree = "<group>"; };
+		254DB3282B81A68600B0B76B /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		254DB32C2B897C2500B0B76B /* MainChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,16 +123,13 @@
 		254DB2CE2B76EF0800B0B76B /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				254DB3072B78680A00B0B76B /* EnumType.swift */,
-				254DB3052B7867D700B0B76B /* Model.swift */,
+				254DB3222B8198A200B0B76B /* Calculator */,
+				254DB3212B81988000B0B76B /* ImageVIew */,
+				254DB3202B81984B00B0B76B /* Connect */,
+				254DB31F2B81982C00B0B76B /* Model */,
 				254DB2FF2B76EFB900B0B76B /* LoginViewController.swift */,
+				254DB3232B819D9800B0B76B /* Me */,
 				254DB3012B76EFC500B0B76B /* Login.storyboard */,
-				254DB30D2B7CDB7300B0B76B /* CanScrollViewController.swift */,
-				254DB31B2B8083E100B0B76B /* ConnectTableViewCell.swift */,
-				254DB31C2B8083E100B0B76B /* ConnectTableViewCell.xib */,
-				254DB3192B80727400B0B76B /* MainChatListTableViewCell.swift */,
-				254DB3092B7893B500B0B76B /* ImageChangeViewController.swift */,
-				254DB3032B772FF800B0B76B /* CalculatorViewController.swift */,
 				254DB2D82B76EF0A00B0B76B /* Assets.xcassets */,
 				254DB2DA2B76EF0A00B0B76B /* LaunchScreen.storyboard */,
 				254DB2D12B76EF0800B0B76B /* SceneDelegate.swift */,
@@ -149,6 +154,53 @@
 				254DB2F22B76EF0A00B0B76B /* LoginUITestsLaunchTests.swift */,
 			);
 			path = LoginUITests;
+			sourceTree = "<group>";
+		};
+		254DB31F2B81982C00B0B76B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				254DB3072B78680A00B0B76B /* EnumType.swift */,
+				254DB3052B7867D700B0B76B /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		254DB3202B81984B00B0B76B /* Connect */ = {
+			isa = PBXGroup;
+			children = (
+				254DB30D2B7CDB7300B0B76B /* CanScrollViewController.swift */,
+				254DB3192B80727400B0B76B /* MainChatListTableViewCell.swift */,
+				254DB31B2B8083E100B0B76B /* ConnectTableViewCell.swift */,
+				254DB31C2B8083E100B0B76B /* ConnectTableViewCell.xib */,
+				254DB32C2B897C2500B0B76B /* MainChatViewModel.swift */,
+			);
+			path = Connect;
+			sourceTree = "<group>";
+		};
+		254DB3212B81988000B0B76B /* ImageVIew */ = {
+			isa = PBXGroup;
+			children = (
+				254DB3092B7893B500B0B76B /* ImageChangeViewController.swift */,
+			);
+			path = ImageVIew;
+			sourceTree = "<group>";
+		};
+		254DB3222B8198A200B0B76B /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				254DB3032B772FF800B0B76B /* CalculatorViewController.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		254DB3232B819D9800B0B76B /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				254DB3242B81A33500B0B76B /* MeTableViewCell.swift */,
+				254DB3252B81A33500B0B76B /* MeTableViewCell.xib */,
+				254DB3282B81A68600B0B76B /* MyViewController.swift */,
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				254DB3272B81A33500B0B76B /* MeTableViewCell.xib in Resources */,
 				254DB2DC2B76EF0A00B0B76B /* LaunchScreen.storyboard in Resources */,
 				254DB2D92B76EF0A00B0B76B /* Assets.xcassets in Resources */,
 				254DB31E2B8083E100B0B76B /* ConnectTableViewCell.xib in Resources */,
@@ -287,11 +340,14 @@
 				254DB3062B7867D700B0B76B /* Model.swift in Sources */,
 				254DB31A2B80727400B0B76B /* MainChatListTableViewCell.swift in Sources */,
 				254DB3002B76EFB900B0B76B /* LoginViewController.swift in Sources */,
+				254DB3262B81A33500B0B76B /* MeTableViewCell.swift in Sources */,
 				254DB3082B78680B00B0B76B /* EnumType.swift in Sources */,
 				254DB2D02B76EF0800B0B76B /* AppDelegate.swift in Sources */,
 				254DB31D2B8083E100B0B76B /* ConnectTableViewCell.swift in Sources */,
 				254DB3042B772FF800B0B76B /* CalculatorViewController.swift in Sources */,
+				254DB32D2B897C2500B0B76B /* MainChatViewModel.swift in Sources */,
 				254DB2D22B76EF0800B0B76B /* SceneDelegate.swift in Sources */,
+				254DB3292B81A68600B0B76B /* MyViewController.swift in Sources */,
 				254DB30A2B7893B500B0B76B /* ImageChangeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

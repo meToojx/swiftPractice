@@ -14,6 +14,7 @@ class CanScrollViewController: UIViewController {
     
     @IBOutlet weak var settingImageView: UIImageView!
     
+    var viewModel: MainChatViewModel = MainChatViewModel()
     // MARK: - Variables
     let messages = [
         WechatMessage(name: "Alice", imageString: "first", chatMsg: ["Hey, how's your day going?"], time: "09:30 AM"),
@@ -28,6 +29,10 @@ class CanScrollViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        setUI()
+        
+        for i in 0...9 {
+            viewModel.getData()
+        }
     }
     // MARK: - objc
     @objc func imageTapAction() {
@@ -72,43 +77,18 @@ class CanScrollViewController: UIViewController {
 extension CanScrollViewController: UITableViewDelegate, UITableViewDataSource {
     // section的数量
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     // row的数量
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 1 : messages.count
+        return  messages.count
     }
     // row里的内容
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 1 {
-            let imageCell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! MainChatListTableViewCell
-            // 通过tag寻找cell内的控件 强制转换以后使用
-    //        let image = imageCell.viewWithTag(1) as! UIImageView
-    //        image.image = UIImage(named: messages[indexPath.row].imageString)
-    //        image.layer.cornerRadius = 10
-    //        image.layer.masksToBounds = true
-    //        let namelabel = imageCell.viewWithTag(2) as! UILabel
-    //        namelabel.text = messages[indexPath.row].name
-    //        let timelabel = imageCell.viewWithTag(3) as! UILabel
-    //        timelabel.text = messages[indexPath.row].time
-    //        let msglabel = imageCell.viewWithTag(4) as! UILabel
-    //        msglabel.text = messages[indexPath.row].chatMsg.last
-            
-            // 是单独建立一个类以后 把cell内的控件 一个一个设置更新
-    //        imageCell.mainImage.image = UIImage(named: messages[indexPath.row].imageString)
-    //        imageCell.nameLabel.text = messages[indexPath.row].name
-    //        imageCell.timeLabel.text = messages[indexPath.row].time
-    //        imageCell.msgLabel.text = messages[indexPath.row].chatMsg.last
-            
-            // 把数据传送给cell以后 让cell自己更新
-            imageCell.useData = messages[indexPath.row]
-            return imageCell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "connectCell", for: indexPath) as! ConnectTableViewCell
-            cell.setUI()
-            return cell
-        }
-
+        let imageCell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! MainChatListTableViewCell
+        // 把数据传送给cell以后 让cell自己更新
+        imageCell.useData = messages[indexPath.row]
+        return imageCell
     }
     
     // row的点击方法
@@ -117,8 +97,7 @@ extension CanScrollViewController: UITableViewDelegate, UITableViewDataSource {
     }
     // row的高度
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-
-        return indexPath.section == 1 ? 82 : 180
+        return 82
     }
     
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
