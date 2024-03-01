@@ -54,3 +54,8 @@ struct Head: Codable {
     var thumbnail: String?
 }
 
+struct FriendMsg {
+    var name: String
+    var imageUrlData: Data
+    var gender: String
+}

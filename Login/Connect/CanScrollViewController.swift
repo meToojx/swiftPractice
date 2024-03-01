@@ -14,7 +14,6 @@ class CanScrollViewController: UIViewController {
     
     @IBOutlet weak var settingImageView: UIImageView!
     
-    var viewModel: MainChatViewModel = MainChatViewModel()
     // MARK: - Variables
     let messages = [
         WechatMessage(name: "Alice", imageString: "first", chatMsg: ["Hey, how's your day going?"], time: "09:30 AM"),
@@ -29,10 +28,7 @@ class CanScrollViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        setUI()
-        
-        for i in 0...9 {
-            viewModel.getData()
-        }
+    
     }
     // MARK: - objc
     @objc func imageTapAction() {
