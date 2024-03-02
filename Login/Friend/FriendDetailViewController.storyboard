@@ -43,7 +43,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pbm-XV-7ze">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dYZ-cD-LVs">
                                                     <rect key="frame" x="0.0" y="20" width="393" height="102"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -53,17 +53,17 @@
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Pbm-XV-7ze" firstAttribute="top" secondItem="BKm-Xx-4nj" secondAttribute="bottom" id="hdI-Xq-w8f"/>
+                                                <constraint firstItem="dYZ-cD-LVs" firstAttribute="top" secondItem="BKm-Xx-4nj" secondAttribute="bottom" id="305-vY-hJ1"/>
+                                                <constraint firstAttribute="bottom" secondItem="dYZ-cD-LVs" secondAttribute="bottom" id="Lmx-t4-Q0a"/>
+                                                <constraint firstAttribute="trailing" secondItem="dYZ-cD-LVs" secondAttribute="trailing" id="QVL-Vd-f3P"/>
                                                 <constraint firstItem="BKm-Xx-4nj" firstAttribute="leading" secondItem="0GQ-ZW-JAT" secondAttribute="leading" id="jyv-AF-sPB"/>
-                                                <constraint firstItem="Pbm-XV-7ze" firstAttribute="leading" secondItem="0GQ-ZW-JAT" secondAttribute="leading" id="neq-JF-fze"/>
-                                                <constraint firstAttribute="bottom" secondItem="Pbm-XV-7ze" secondAttribute="bottom" id="wFW-Ns-lQo"/>
+                                                <constraint firstItem="dYZ-cD-LVs" firstAttribute="leading" secondItem="0GQ-ZW-JAT" secondAttribute="leading" id="rjA-No-4Rj"/>
                                                 <constraint firstItem="BKm-Xx-4nj" firstAttribute="top" secondItem="0GQ-ZW-JAT" secondAttribute="top" id="x2O-2F-e34"/>
-                                                <constraint firstAttribute="trailing" secondItem="Pbm-XV-7ze" secondAttribute="trailing" id="xU6-Ih-FFr"/>
                                                 <constraint firstAttribute="trailing" secondItem="BKm-Xx-4nj" secondAttribute="trailing" id="xe7-Ux-3PU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="messageTextView" destination="Pbm-XV-7ze" id="qRU-D5-lPE"/>
+                                            <outlet property="messageTextView" destination="dYZ-cD-LVs" id="O9x-Fq-swW"/>
                                             <outlet property="titleLabel" destination="BKm-Xx-4nj" id="w7o-ut-7EJ"/>
                                         </connections>
                                     </tableViewCell>
@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNj-t3-LeX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="327" y="-4"/>
+            <point key="canvasLocation" x="325.95419847328242" y="-4.2253521126760569"/>
         </scene>
     </scenes>
     <resources>

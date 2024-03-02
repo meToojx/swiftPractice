@@ -200,7 +200,7 @@
             </objects>
             <point key="canvasLocation" x="-385.49618320610688" y="1024.6478873239437"/>
         </scene>
-        <!--Item-->
+        <!--Friend-->
         <scene sceneID="KOX-xh-9iV">
             <objects>
                 <viewController id="ZXA-yW-QLP" customClass="FriendViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
@@ -222,7 +222,7 @@
                             <constraint firstItem="Eay-xs-eky" firstAttribute="bottom" secondItem="KDN-0D-rtc" secondAttribute="bottom" id="vmq-FV-W5F"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="person.3" catalog="system" id="iVW-0p-zmF"/>
+                    <tabBarItem key="tabBarItem" title="Friend" image="person.3" catalog="system" id="iVW-0p-zmF"/>
                     <navigationItem key="navigationItem" id="PXN-fF-SvY">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.line.dotted.person.fill" catalog="system" id="VVp-jv-26k">
                             <connections>

@@ -33,6 +33,7 @@
 		254DB3362B89B16600B0B76B /* FriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB3352B89B16600B0B76B /* FriendViewModel.swift */; };
 		254DB3392B921ED100B0B76B /* FriendDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254DB3382B921ED100B0B76B /* FriendDetailViewController.storyboard */; };
 		254DB33B2B921EE900B0B76B /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB33A2B921EE900B0B76B /* FriendDetailViewController.swift */; };
+		254DB33E2B92FF9200B0B76B /* SendDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB33D2B92FF9200B0B76B /* SendDataProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		254DB3352B89B16600B0B76B /* FriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModel.swift; sourceTree = "<group>"; };
 		254DB3382B921ED100B0B76B /* FriendDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendDetailViewController.storyboard; sourceTree = "<group>"; };
 		254DB33A2B921EE900B0B76B /* FriendDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
+		254DB33D2B92FF9200B0B76B /* SendDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		254DB2CE2B76EF0800B0B76B /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				254DB33C2B92FEB500B0B76B /* Protocol */,
 				254DB32E2B898E6500B0B76B /* Friend */,
 				254DB3222B8198A200B0B76B /* Calculator */,
 				254DB3212B81988000B0B76B /* ImageVIew */,
@@ -224,6 +227,14 @@
 				254DB3352B89B16600B0B76B /* FriendViewModel.swift */,
 			);
 			path = Friend;
+			sourceTree = "<group>";
+		};
+		254DB33C2B92FEB500B0B76B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				254DB33D2B92FF9200B0B76B /* SendDataProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +377,7 @@
 				254DB3302B898E7D00B0B76B /* FriendViewController.swift in Sources */,
 				254DB31A2B80727400B0B76B /* MainChatListTableViewCell.swift in Sources */,
 				254DB3002B76EFB900B0B76B /* LoginViewController.swift in Sources */,
+				254DB33E2B92FF9200B0B76B /* SendDataProtocol.swift in Sources */,
 				254DB3362B89B16600B0B76B /* FriendViewModel.swift in Sources */,
 				254DB3262B81A33500B0B76B /* MeTableViewCell.swift in Sources */,
 				254DB3082B78680B00B0B76B /* EnumType.swift in Sources */,

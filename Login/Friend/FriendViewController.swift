@@ -23,6 +23,7 @@ class FriendViewController: UIViewController {
     }
     // 新建加载视图
     let indicatorView = UIActivityIndicatorView()
+    var selectRow = 0
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,11 +37,11 @@ class FriendViewController: UIViewController {
     // MARK: - Function
     func setUI() {
         // tableView的相关设定
-        self.mainTableView.dataSource = self
-        self.mainTableView.delegate = self
+        mainTableView.dataSource = self
+        mainTableView.delegate = self
         mainTableView.register(UINib(nibName: "FriendTableViewCell", bundle: nil), forCellReuseIdentifier: "friendCell")
         // navigationBar 的相关设定
-        self.navigationItem.title = "Friend"
+        navigationItem.title = "Friend"
         // 加载视图的相关设定
         indicatorView.style = .large
         indicatorView.color = .blue
@@ -83,6 +84,7 @@ extension FriendViewController: UITableViewDelegate, UITableViewDataSource {
         return 80
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectRow = indexPath.row
         // 设定storyBoard
         let storyBoard: UIStoryboard = UIStoryboard(name: "FriendDetailViewController", bundle: nil)
         // 实例化一个viewcontroller
@@ -90,7 +92,17 @@ extension FriendViewController: UITableViewDelegate, UITableViewDataSource {
         // 隐藏底部tabbar
         viewController.hidesBottomBarWhenPushed = true
         viewController.onemessage = showData[indexPath.row]
+        viewController.delegate = self
         // push跳转
         navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+extension FriendViewController: SendDataDelegate {
+    func sendData(value: String) {
+        
+    }
+    
+    func sendDataBetweenViewController(value: FriendMsg) {
+        showData[selectRow] = value
     }
 }
