@@ -53,6 +53,9 @@
                     </view>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wlb-0y-ANP">
                         <rect key="frame" x="372" y="24.666666666666671" width="51" height="31"/>
+                        <connections>
+                            <action selector="switchAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="aEx-cH-xKI"/>
+                        </connections>
                     </switch>
                 </subviews>
                 <constraints>
@@ -67,6 +70,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="canEditSwitch" destination="Wlb-0y-ANP" id="JOP-UC-lHu"/>
                 <outlet property="friendGender" destination="vYI-z1-ON6" id="OH1-qy-Vdm"/>
                 <outlet property="friendHeadImage" destination="jtc-no-q2h" id="iTv-Xk-3IC"/>
                 <outlet property="friendName" destination="FtF-5e-Tn8" id="29r-Yg-ZJS"/>

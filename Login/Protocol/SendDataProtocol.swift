@@ -11,3 +11,7 @@ protocol SendDataDelegate {
     func sendData(value: String)
     func sendDataBetweenViewController(value: FriendMsg)
 }
+
+protocol SendDataInFriend {
+    func sendSingleFriendMsg(value: FriendMsg, indexCount: Int)
+}

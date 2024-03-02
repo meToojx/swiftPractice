@@ -61,4 +61,5 @@ struct FriendMsg {
     var address:String
     var phone:String
     var email:String
+    var canEdit: Bool = true
 }

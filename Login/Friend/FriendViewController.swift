@@ -78,6 +78,8 @@ extension FriendViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath) as! FriendTableViewCell
         cell.mainMsg = showData[indexPath.row]
+        cell.canEditSwitch.tag = indexPath.row
+        cell.delegate = self
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -104,5 +106,10 @@ extension FriendViewController: SendDataDelegate {
     
     func sendDataBetweenViewController(value: FriendMsg) {
         showData[selectRow] = value
+    }
+}
+extension FriendViewController: SendDataInFriend {
+    func sendSingleFriendMsg(value: FriendMsg, indexCount: Int) {
+        showData[indexCount] = value
     }
 }

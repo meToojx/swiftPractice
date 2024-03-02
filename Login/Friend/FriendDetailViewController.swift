@@ -52,6 +52,7 @@ extension FriendDetailViewController: UITableViewDataSource,UITableViewDelegate 
         // 实例化我们建好的cell
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "friendDetailCell", for: indexPath) as? FriendDetailCell else { return UITableViewCell()}
         cell.delegate = self
+        cell.messageTextView.isEditable = onemessage?.canEdit ?? true
         switch indexPath.row {
         case 0:
             // 第一个row显示姓名
@@ -90,7 +91,15 @@ extension FriendDetailViewController: SendDataDelegate {
     func sendDataBetweenViewController(value: FriendMsg) {
     }
     
-    func sendData(value: String) {
+    func sendData(value: String/*, intputType: xxxxenum*/ ) {
+//        switch intputType {
+//        case .name:
+//            onemessage?.name = value
+//        case .address:
+//            onemessage?.address = value
+//        case .gender:
+//            
+//        }
         onemessage?.name = value
     }
 }
