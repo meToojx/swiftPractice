@@ -8,7 +8,6 @@
 import UIKit
 
 class FriendTableViewCell: UITableViewCell {
-
     @IBOutlet weak var friendHeadImage: UIImageView!
     @IBOutlet weak var friendGender: UILabel!
     @IBOutlet weak var friendName: UILabel!

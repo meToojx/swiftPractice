@@ -200,7 +200,7 @@
             </objects>
             <point key="canvasLocation" x="-385.49618320610688" y="1024.6478873239437"/>
         </scene>
-        <!--Friend View Controller-->
+        <!--Item-->
         <scene sceneID="KOX-xh-9iV">
             <objects>
                 <viewController id="ZXA-yW-QLP" customClass="FriendViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
@@ -222,7 +222,14 @@
                             <constraint firstItem="Eay-xs-eky" firstAttribute="bottom" secondItem="KDN-0D-rtc" secondAttribute="bottom" id="vmq-FV-W5F"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="PXN-fF-SvY"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="person.3" catalog="system" id="iVW-0p-zmF"/>
+                    <navigationItem key="navigationItem" id="PXN-fF-SvY">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.line.dotted.person.fill" catalog="system" id="VVp-jv-26k">
+                            <connections>
+                                <action selector="friendUpData:" destination="ZXA-yW-QLP" id="oSf-4P-q8p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mainTableView" destination="KDN-0D-rtc" id="wfP-ni-sDO"/>
                     </connections>
@@ -648,7 +655,7 @@
                         <segue destination="EXo-TP-mil" kind="relationship" relationship="viewControllers" id="jWl-wW-ZuV"/>
                         <segue destination="gB1-TW-uWY" kind="relationship" relationship="viewControllers" id="oMa-Pg-sW8"/>
                         <segue destination="Gjy-9e-yvW" kind="relationship" relationship="viewControllers" id="LcQ-17-Nbe"/>
-                        <segue destination="Yy3-Y3-Ad1" kind="relationship" relationship="viewControllers" id="b1c-Ki-pd7"/>
+                        <segue destination="Yy3-Y3-Ad1" kind="relationship" relationship="viewControllers" id="TQs-km-VEJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bpd-5E-rup" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -678,7 +685,7 @@
         <scene sceneID="odJ-dV-kfM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yy3-Y3-Ad1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Friend" id="ShS-v3-DR9"/>
+                    <tabBarItem key="tabBarItem" title="Friend" selectedImage="person.2" catalog="system" id="ShS-v3-DR9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1oj-NP-NzF">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -698,7 +705,10 @@
         <image name="book" catalog="system" width="128" height="99"/>
         <image name="doc.plaintext" catalog="system" width="115" height="128"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="person.2" catalog="system" width="128" height="87"/>
+        <image name="person.3" catalog="system" width="128" height="66"/>
         <image name="person.and.background.dotted" catalog="system" width="128" height="101"/>
+        <image name="person.line.dotted.person.fill" catalog="system" width="128" height="59"/>
         <image name="scribble" catalog="system" width="128" height="117"/>
         <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
         <systemColor name="systemBackgroundColor">

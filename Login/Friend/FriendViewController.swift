@@ -12,42 +12,60 @@ class FriendViewController: UIViewController {
     @IBOutlet weak var mainTableView: UITableView!
     // MARK: - Variable
     var viewModel = FriendViewModel()
+    // 画面主要显示的数据
     var showData: [FriendMsg] = [] {
         didSet {
             DispatchQueue.main.async {
+                // 每当数据被更新的时候 就刷线tableView 更新视图
                 self.mainTableView.reloadData()
             }
         }
     }
-//    var subShowData: [FriendMsg] = [] {
-//        didSet {
-//            if subShowData.count >= 10 {
-//                self.showData = subShowData
-//            }
-//        }
-//    }
+    // 新建加载视图
+    let indicatorView = UIActivityIndicatorView()
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI(name: "")
+        setUI()
+    }
+    // MARK: - Action
+    // navigationbar的右侧按键
+    @IBAction func friendUpData(_ sender: UIBarButtonItem) {
+        getAndUpdateData()
     }
     // MARK: - Function
-    func setUI(name: String) {
+    func setUI() {
+        // tableView的相关设定
         self.mainTableView.dataSource = self
         self.mainTableView.delegate = self
         mainTableView.register(UINib(nibName: "FriendTableViewCell", bundle: nil), forCellReuseIdentifier: "friendCell")
-        for i in 0...9 {
-            viewModel.getData { singleMsg in
-                self.showData.append(singleMsg)
-            }
+        // navigationBar 的相关设定
+        self.navigationItem.title = "Friend"
+        // 加载视图的相关设定
+        indicatorView.style = .large
+        indicatorView.color = .blue
+        indicatorView.center = self.view.center
+        indicatorView.hidesWhenStopped = true
+        // 将加载视图添加到当前桌面
+        self.view.addSubview(indicatorView)
+        getAndUpdateData()
+    }
+    func getAndUpdateData() {
+        // 加载启动
+        indicatorView.startAnimating()
+        // 通信过程中使点击无效化
+        self.view.isUserInteractionEnabled = false
+        // 清空当前页面
+        self.viewModel.friends.removeAll()
+        // 执行10次通信 （串联）
+        viewModel.getData(count: 9) {
+            // 通信结束以后 将所得数据放到当前视图的数据中
+            self.showData = self.viewModel.friends
+            // 加载停止
+            self.indicatorView.stopAnimating()
+            // 通信结束 点击有效
+            self.view.isUserInteractionEnabled = true
         }
-        
-//        for i in 0...9 {
-//            print(1)
-//            viewModel.getData { singleMsg in
-//                self.subShowData.append(singleMsg)
-//            }
-//        }
     }
 }
 
@@ -56,7 +74,6 @@ extension FriendViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return showData.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath) as! FriendTableViewCell
         cell.mainMsg = showData[indexPath.row]
@@ -64,5 +81,16 @@ extension FriendViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 设定storyBoard
+        let storyBoard: UIStoryboard = UIStoryboard(name: "FriendDetailViewController", bundle: nil)
+        // 实例化一个viewcontroller
+        let viewController = storyBoard.instantiateViewController(identifier: "friendDetail") as! FriendDetailViewController
+        // 隐藏底部tabbar
+        viewController.hidesBottomBarWhenPushed = true
+        viewController.onemessage = showData[indexPath.row]
+        // push跳转
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
