@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SendDataDelegate {
-    func sendData(value: String)
+    func sendData(value: String, valueType: InputType)
     func sendDataBetweenViewController(value: FriendMsg)
 }
 

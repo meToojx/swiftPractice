@@ -58,10 +58,16 @@ class FriendViewController: UIViewController {
         self.view.isUserInteractionEnabled = false
         // 清空当前页面
         self.viewModel.friends.removeAll()
+        var needSaveData: [FriendMsg] = []
+        for i in showData {
+            if i.isSave {
+                needSaveData.append(i)
+            }
+        }
         // 执行10次通信 （串联）
         viewModel.getData(count: 9) {
             // 通信结束以后 将所得数据放到当前视图的数据中
-            self.showData = self.viewModel.friends
+            self.showData = needSaveData + self.viewModel.friends
             // 加载停止
             self.indicatorView.stopAnimating()
             // 通信结束 点击有效
@@ -100,10 +106,10 @@ extension FriendViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 extension FriendViewController: SendDataDelegate {
-    func sendData(value: String) {
+    func sendData(value: String, valueType: InputType) {
         
     }
-    
+
     func sendDataBetweenViewController(value: FriendMsg) {
         showData[selectRow] = value
     }

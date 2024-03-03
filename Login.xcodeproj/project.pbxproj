@@ -34,6 +34,9 @@
 		254DB3392B921ED100B0B76B /* FriendDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254DB3382B921ED100B0B76B /* FriendDetailViewController.storyboard */; };
 		254DB33B2B921EE900B0B76B /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB33A2B921EE900B0B76B /* FriendDetailViewController.swift */; };
 		254DB33E2B92FF9200B0B76B /* SendDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB33D2B92FF9200B0B76B /* SendDataProtocol.swift */; };
+		25AE9A4C2B9405DC004A3BA5 /* FriendDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AE9A4B2B9405DC004A3BA5 /* FriendDetailCell.swift */; };
+		25AE9A4F2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AE9A4D2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.swift */; };
+		25AE9A502B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AE9A4E2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		254DB3382B921ED100B0B76B /* FriendDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendDetailViewController.storyboard; sourceTree = "<group>"; };
 		254DB33A2B921EE900B0B76B /* FriendDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
 		254DB33D2B92FF9200B0B76B /* SendDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataProtocol.swift; sourceTree = "<group>"; };
+		25AE9A4B2B9405DC004A3BA5 /* FriendDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailCell.swift; sourceTree = "<group>"; };
+		25AE9A4D2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFriendDetailTableViewCell.swift; sourceTree = "<group>"; };
+		25AE9A4E2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteFriendDetailTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +231,9 @@
 				254DB3312B898EAA00B0B76B /* FriendTableViewCell.swift */,
 				254DB3322B898EAA00B0B76B /* FriendTableViewCell.xib */,
 				254DB3352B89B16600B0B76B /* FriendViewModel.swift */,
+				25AE9A4B2B9405DC004A3BA5 /* FriendDetailCell.swift */,
+				25AE9A4D2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.swift */,
+				25AE9A4E2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib */,
 			);
 			path = Friend;
 			sourceTree = "<group>";
@@ -346,6 +355,7 @@
 				254DB2DC2B76EF0A00B0B76B /* LaunchScreen.storyboard in Resources */,
 				254DB2D92B76EF0A00B0B76B /* Assets.xcassets in Resources */,
 				254DB3392B921ED100B0B76B /* FriendDetailViewController.storyboard in Resources */,
+				25AE9A502B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib in Resources */,
 				254DB31E2B8083E100B0B76B /* ConnectTableViewCell.xib in Resources */,
 				254DB3022B76EFC500B0B76B /* Login.storyboard in Resources */,
 			);
@@ -377,6 +387,7 @@
 				254DB3302B898E7D00B0B76B /* FriendViewController.swift in Sources */,
 				254DB31A2B80727400B0B76B /* MainChatListTableViewCell.swift in Sources */,
 				254DB3002B76EFB900B0B76B /* LoginViewController.swift in Sources */,
+				25AE9A4F2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.swift in Sources */,
 				254DB33E2B92FF9200B0B76B /* SendDataProtocol.swift in Sources */,
 				254DB3362B89B16600B0B76B /* FriendViewModel.swift in Sources */,
 				254DB3262B81A33500B0B76B /* MeTableViewCell.swift in Sources */,
@@ -384,6 +395,7 @@
 				254DB2D02B76EF0800B0B76B /* AppDelegate.swift in Sources */,
 				254DB31D2B8083E100B0B76B /* ConnectTableViewCell.swift in Sources */,
 				254DB33B2B921EE900B0B76B /* FriendDetailViewController.swift in Sources */,
+				25AE9A4C2B9405DC004A3BA5 /* FriendDetailCell.swift in Sources */,
 				254DB3042B772FF800B0B76B /* CalculatorViewController.swift in Sources */,
 				254DB2D22B76EF0800B0B76B /* SceneDelegate.swift in Sources */,
 				254DB3292B81A68600B0B76B /* MyViewController.swift in Sources */,

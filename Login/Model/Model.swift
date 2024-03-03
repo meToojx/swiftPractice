@@ -62,4 +62,5 @@ struct FriendMsg {
     var phone:String
     var email:String
     var canEdit: Bool = true
+    var isSave = false
 }

@@ -7,6 +7,15 @@
 
 import UIKit
 
+enum InputType {
+    case name
+    case gender
+    case phone
+    case email
+    case address
+}
+
+
 class FriendDetailViewController: UIViewController {
     // MARK: - Outlets
     // 当前的tableview
@@ -31,6 +40,7 @@ class FriendDetailViewController: UIViewController {
     // navigationbar 右上方保存按键
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
         self.view.endEditing(true)
+        onemessage?.isSave = true
         if let realOneMessage = onemessage {
             delegate?.sendDataBetweenViewController(value: realOneMessage)
         }
@@ -57,22 +67,27 @@ extension FriendDetailViewController: UITableViewDataSource,UITableViewDelegate 
         case 0:
             // 第一个row显示姓名
             cell.titleLabel.text = "name"
+            cell.textViewType = .name
             cell.messageTextView.text = onemessage?.name
         case 1:
             // 第二个row显示性别
             cell.titleLabel.text = "gender"
+            cell.textViewType = .gender
             cell.messageTextView.text = onemessage?.gender
         case 2:
             // 第三个row显示电话
             cell.titleLabel.text = "phone"
+            cell.textViewType = .phone
             cell.messageTextView.text = onemessage?.phone
         case 3:
             // 第四个row显示邮箱
             cell.titleLabel.text = "email"
+            cell.textViewType = .email
             cell.messageTextView.text = onemessage?.email
         default:
             // 最后一个row显示地址
             cell.titleLabel.text = "address"
+            cell.textViewType = .address
             cell.messageTextView.text = onemessage?.address
         }
         return cell
@@ -88,40 +103,21 @@ extension FriendDetailViewController: UITableViewDataSource,UITableViewDelegate 
 }
 
 extension FriendDetailViewController: SendDataDelegate {
-    func sendDataBetweenViewController(value: FriendMsg) {
+    func sendData(value: String, valueType: InputType) {
+        switch valueType {
+        case .name:
+            onemessage?.name = value
+        case .gender:
+            onemessage?.gender = value
+        case .phone:
+            onemessage?.phone = value
+        case .email:
+            onemessage?.email = value
+        case .address:
+            onemessage?.address = value
+        }
     }
     
-    func sendData(value: String/*, intputType: xxxxenum*/ ) {
-//        switch intputType {
-//        case .name:
-//            onemessage?.name = value
-//        case .address:
-//            onemessage?.address = value
-//        case .gender:
-//            
-//        }
-        onemessage?.name = value
-    }
-}
-
-
-
-class FriendDetailCell: UITableViewCell {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var messageTextView: UITextView!
-    var delegate: SendDataDelegate?
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        messageTextView.delegate = self
-    }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.endEditing(true)
-    }
-}
-
-extension FriendDetailCell: UITextViewDelegate {
-    // 监视 textView的编辑结束的状态
-    func textViewDidEndEditing(_ textView: UITextView) {
-        delegate?.sendData(value: textView.text)
+    func sendDataBetweenViewController(value: FriendMsg) {
     }
 }
