@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		252832682B9BFEE000746AD9 /* Service.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252832672B9BFEE000746AD9 /* Service.storyboard */; };
+		2528326A2B9BFF0300746AD9 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252832692B9BFF0300746AD9 /* ServiceViewController.swift */; };
+		2528326C2B9C2B6F00746AD9 /* ShowWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528326B2B9C2B6F00746AD9 /* ShowWebViewController.swift */; };
+		2528326E2B9C2B7D00746AD9 /* ShowWeb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2528326D2B9C2B7D00746AD9 /* ShowWeb.storyboard */; };
 		254DB2D02B76EF0800B0B76B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB2CF2B76EF0800B0B76B /* AppDelegate.swift */; };
 		254DB2D22B76EF0800B0B76B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB2D12B76EF0800B0B76B /* SceneDelegate.swift */; };
 		254DB2D92B76EF0A00B0B76B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 254DB2D82B76EF0A00B0B76B /* Assets.xcassets */; };
@@ -61,6 +65,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		252832672B9BFEE000746AD9 /* Service.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Service.storyboard; sourceTree = "<group>"; };
+		252832692B9BFF0300746AD9 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		2528326B2B9C2B6F00746AD9 /* ShowWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWebViewController.swift; sourceTree = "<group>"; };
+		2528326D2B9C2B7D00746AD9 /* ShowWeb.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowWeb.storyboard; sourceTree = "<group>"; };
 		254DB2CC2B76EF0800B0B76B /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		254DB2CF2B76EF0800B0B76B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		254DB2D12B76EF0800B0B76B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -238,6 +246,10 @@
 				254DB3242B81A33500B0B76B /* MeTableViewCell.swift */,
 				254DB3252B81A33500B0B76B /* MeTableViewCell.xib */,
 				254DB3282B81A68600B0B76B /* MyViewController.swift */,
+				252832672B9BFEE000746AD9 /* Service.storyboard */,
+				252832692B9BFF0300746AD9 /* ServiceViewController.swift */,
+				2528326B2B9C2B6F00746AD9 /* ShowWebViewController.swift */,
+				2528326D2B9C2B7D00746AD9 /* ShowWeb.storyboard */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -286,7 +298,6 @@
 				630D529FDAB856118489F525 /* Pods-LoginTests.debug.xcconfig */,
 				B93084D1CA0C948FF2E0A09C /* Pods-LoginTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -301,7 +312,6 @@
 				254DB2C82B76EF0800B0B76B /* Sources */,
 				254DB2C92B76EF0800B0B76B /* Frameworks */,
 				254DB2CA2B76EF0800B0B76B /* Resources */,
-				C69A37F366E79C10CCA1FFA3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -339,7 +349,6 @@
 				254DB2E82B76EF0A00B0B76B /* Sources */,
 				254DB2E92B76EF0A00B0B76B /* Frameworks */,
 				254DB2EA2B76EF0A00B0B76B /* Resources */,
-				D9556C766B14B84280912F5E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -399,9 +408,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				252832682B9BFEE000746AD9 /* Service.storyboard in Resources */,
 				254DB3272B81A33500B0B76B /* MeTableViewCell.xib in Resources */,
 				254DB3342B898EAA00B0B76B /* FriendTableViewCell.xib in Resources */,
 				254DB2DC2B76EF0A00B0B76B /* LaunchScreen.storyboard in Resources */,
+				2528326E2B9C2B7D00746AD9 /* ShowWeb.storyboard in Resources */,
 				254DB2D92B76EF0A00B0B76B /* Assets.xcassets in Resources */,
 				254DB3392B921ED100B0B76B /* FriendDetailViewController.storyboard in Resources */,
 				25AE9A502B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib in Resources */,
@@ -449,23 +460,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C69A37F366E79C10CCA1FFA3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Login/Pods-Login-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Login/Pods-Login-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Login/Pods-Login-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CAC88E24E2D4551945C71BD8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -486,23 +480,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D9556C766B14B84280912F5E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Login-LoginUITests/Pods-Login-LoginUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Login-LoginUITests/Pods-Login-LoginUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Login-LoginUITests/Pods-Login-LoginUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F58B789059218E4E76E4A5EA /* [CP] Check Pods Manifest.lock */ = {
@@ -545,8 +522,10 @@
 				254DB3362B89B16600B0B76B /* FriendViewModel.swift in Sources */,
 				254DB3262B81A33500B0B76B /* MeTableViewCell.swift in Sources */,
 				254DB3082B78680B00B0B76B /* EnumType.swift in Sources */,
+				2528326A2B9BFF0300746AD9 /* ServiceViewController.swift in Sources */,
 				254DB2D02B76EF0800B0B76B /* AppDelegate.swift in Sources */,
 				254DB31D2B8083E100B0B76B /* ConnectTableViewCell.swift in Sources */,
+				2528326C2B9C2B6F00746AD9 /* ShowWebViewController.swift in Sources */,
 				254DB33B2B921EE900B0B76B /* FriendDetailViewController.swift in Sources */,
 				25AE9A4C2B9405DC004A3BA5 /* FriendDetailCell.swift in Sources */,
 				254DB3042B772FF800B0B76B /* CalculatorViewController.swift in Sources */,

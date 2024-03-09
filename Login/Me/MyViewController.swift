@@ -31,6 +31,7 @@ class MyViewController: UIViewController {
         mainTableView.backgroundColor = .systemGray6
         mainTableView.register(UINib(nibName: "MeTableViewCell", bundle: nil), forCellReuseIdentifier: "myCell")
         mainTableView.register(UINib(nibName: "ConnectTableViewCell", bundle: nil), forCellReuseIdentifier: "connectCell")
+        navigationItem.title = "My Page"
     }
     // MARK: - Function
     func presentAction() {
@@ -87,7 +88,20 @@ extension MyViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return indexPath.section == 0 ? 160 : 50
     }
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            switch indexPath.row {
+            case 0:
+                let storyBoard = UIStoryboard(name: "Service", bundle: nil)
+                let viewController = storyBoard.instantiateViewController(identifier: "Service") as! ServiceViewController
+                viewController.hidesBottomBarWhenPushed = true
+                navigationController?.pushViewController(viewController, animated: true)
+            default:
+                break
+            }
+        }
+        
+    }
     // 设置footerView
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         // 自定义一个UIView 设置高为1 宽为 tableview的宽
