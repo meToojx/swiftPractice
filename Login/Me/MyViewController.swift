@@ -99,6 +99,8 @@ extension MyViewController: UITableViewDelegate, UITableViewDataSource {
             default:
                 break
             }
+        } else {
+            Netmanager().commonNet(category: .anger)
         }
         
     }

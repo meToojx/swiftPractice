@@ -38,6 +38,7 @@
 		254DB3392B921ED100B0B76B /* FriendDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254DB3382B921ED100B0B76B /* FriendDetailViewController.storyboard */; };
 		254DB33B2B921EE900B0B76B /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB33A2B921EE900B0B76B /* FriendDetailViewController.swift */; };
 		254DB33E2B92FF9200B0B76B /* SendDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB33D2B92FF9200B0B76B /* SendDataProtocol.swift */; };
+		258399AA2B9CAB8D0037D7E3 /* Netmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258399A92B9CAB8D0037D7E3 /* Netmanager.swift */; };
 		25AE9A4C2B9405DC004A3BA5 /* FriendDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AE9A4B2B9405DC004A3BA5 /* FriendDetailCell.swift */; };
 		25AE9A4F2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AE9A4D2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.swift */; };
 		25AE9A502B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AE9A4E2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib */; };
@@ -100,6 +101,7 @@
 		254DB3382B921ED100B0B76B /* FriendDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendDetailViewController.storyboard; sourceTree = "<group>"; };
 		254DB33A2B921EE900B0B76B /* FriendDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
 		254DB33D2B92FF9200B0B76B /* SendDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataProtocol.swift; sourceTree = "<group>"; };
+		258399A92B9CAB8D0037D7E3 /* Netmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Netmanager.swift; sourceTree = "<group>"; };
 		25AE9A4B2B9405DC004A3BA5 /* FriendDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailCell.swift; sourceTree = "<group>"; };
 		25AE9A4D2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFriendDetailTableViewCell.swift; sourceTree = "<group>"; };
 		25AE9A4E2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteFriendDetailTableViewCell.xib; sourceTree = "<group>"; };
@@ -174,12 +176,13 @@
 				254DB3212B81988000B0B76B /* ImageVIew */,
 				254DB3202B81984B00B0B76B /* Connect */,
 				254DB31F2B81982C00B0B76B /* Model */,
-				254DB2FF2B76EFB900B0B76B /* LoginViewController.swift */,
 				254DB3232B819D9800B0B76B /* Me */,
 				254DB3012B76EFC500B0B76B /* Login.storyboard */,
+				254DB2FF2B76EFB900B0B76B /* LoginViewController.swift */,
 				254DB2D82B76EF0A00B0B76B /* Assets.xcassets */,
 				254DB2DA2B76EF0A00B0B76B /* LaunchScreen.storyboard */,
 				254DB2D12B76EF0800B0B76B /* SceneDelegate.swift */,
+				258399A92B9CAB8D0037D7E3 /* Netmanager.swift */,
 				254DB2CF2B76EF0800B0B76B /* AppDelegate.swift */,
 				254DB2DD2B76EF0A00B0B76B /* Info.plist */,
 			);
@@ -565,6 +568,7 @@
 				254DB33B2B921EE900B0B76B /* FriendDetailViewController.swift in Sources */,
 				25AE9A4C2B9405DC004A3BA5 /* FriendDetailCell.swift in Sources */,
 				254DB3042B772FF800B0B76B /* CalculatorViewController.swift in Sources */,
+				258399AA2B9CAB8D0037D7E3 /* Netmanager.swift in Sources */,
 				254DB2D22B76EF0800B0B76B /* SceneDelegate.swift in Sources */,
 				254DB3292B81A68600B0B76B /* MyViewController.swift in Sources */,
 				254DB30A2B7893B500B0B76B /* ImageChangeViewController.swift in Sources */,
@@ -744,6 +748,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K94W73YTUH;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Login/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -772,6 +777,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K94W73YTUH;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Login/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
