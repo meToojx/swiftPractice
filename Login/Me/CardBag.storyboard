@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card Bag View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CardBag" id="Y6W-OH-hqX" customClass="CardBagViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q0a-tw-S1A">
+                                <rect key="frame" x="20" y="159" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnZ-2r-RQ3">
+                                <rect key="frame" x="100" y="253" width="193" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="getAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="v0Q-35-6GT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="lnZ-2r-RQ3" firstAttribute="top" secondItem="q0a-tw-S1A" secondAttribute="bottom" constant="60" id="I3y-zf-cpV"/>
+                            <constraint firstItem="q0a-tw-S1A" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="aPx-AF-twF"/>
+                            <constraint firstItem="lnZ-2r-RQ3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="dNt-Yy-E37"/>
+                            <constraint firstItem="lnZ-2r-RQ3" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tpR-iQ-PLO"/>
+                            <constraint firstItem="q0a-tw-S1A" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="vjj-ut-iGF"/>
+                            <constraint firstItem="q0a-tw-S1A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="y5x-Za-qEU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getButton" destination="lnZ-2r-RQ3" id="Tf3-OF-nW7"/>
+                        <outlet property="showTextField" destination="q0a-tw-S1A" id="DAq-rk-rDj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

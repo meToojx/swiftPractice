@@ -39,6 +39,8 @@
 		254DB33B2B921EE900B0B76B /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB33A2B921EE900B0B76B /* FriendDetailViewController.swift */; };
 		254DB33E2B92FF9200B0B76B /* SendDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254DB33D2B92FF9200B0B76B /* SendDataProtocol.swift */; };
 		258399AA2B9CAB8D0037D7E3 /* Netmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258399A92B9CAB8D0037D7E3 /* Netmanager.swift */; };
+		258399B02BA1BFD30037D7E3 /* CardBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258399AF2BA1BFD30037D7E3 /* CardBagViewController.swift */; };
+		258399B22BA1BFE80037D7E3 /* CardBag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258399B12BA1BFE80037D7E3 /* CardBag.storyboard */; };
 		25AE9A4C2B9405DC004A3BA5 /* FriendDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AE9A4B2B9405DC004A3BA5 /* FriendDetailCell.swift */; };
 		25AE9A4F2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AE9A4D2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.swift */; };
 		25AE9A502B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AE9A4E2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib */; };
@@ -102,6 +104,8 @@
 		254DB33A2B921EE900B0B76B /* FriendDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
 		254DB33D2B92FF9200B0B76B /* SendDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataProtocol.swift; sourceTree = "<group>"; };
 		258399A92B9CAB8D0037D7E3 /* Netmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Netmanager.swift; sourceTree = "<group>"; };
+		258399AF2BA1BFD30037D7E3 /* CardBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBagViewController.swift; sourceTree = "<group>"; };
+		258399B12BA1BFE80037D7E3 /* CardBag.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardBag.storyboard; sourceTree = "<group>"; };
 		25AE9A4B2B9405DC004A3BA5 /* FriendDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailCell.swift; sourceTree = "<group>"; };
 		25AE9A4D2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFriendDetailTableViewCell.swift; sourceTree = "<group>"; };
 		25AE9A4E2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteFriendDetailTableViewCell.xib; sourceTree = "<group>"; };
@@ -253,6 +257,8 @@
 				252832692B9BFF0300746AD9 /* ServiceViewController.swift */,
 				2528326B2B9C2B6F00746AD9 /* ShowWebViewController.swift */,
 				2528326D2B9C2B7D00746AD9 /* ShowWeb.storyboard */,
+				258399AF2BA1BFD30037D7E3 /* CardBagViewController.swift */,
+				258399B12BA1BFE80037D7E3 /* CardBag.storyboard */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -415,6 +421,7 @@
 			files = (
 				252832682B9BFEE000746AD9 /* Service.storyboard in Resources */,
 				254DB3272B81A33500B0B76B /* MeTableViewCell.xib in Resources */,
+				258399B22BA1BFE80037D7E3 /* CardBag.storyboard in Resources */,
 				254DB3342B898EAA00B0B76B /* FriendTableViewCell.xib in Resources */,
 				254DB2DC2B76EF0A00B0B76B /* LaunchScreen.storyboard in Resources */,
 				2528326E2B9C2B7D00746AD9 /* ShowWeb.storyboard in Resources */,
@@ -559,6 +566,7 @@
 				25AE9A522B9447DB004A3BA5 /* ImageCollectionViewCell.swift in Sources */,
 				254DB33E2B92FF9200B0B76B /* SendDataProtocol.swift in Sources */,
 				254DB3362B89B16600B0B76B /* FriendViewModel.swift in Sources */,
+				258399B02BA1BFD30037D7E3 /* CardBagViewController.swift in Sources */,
 				254DB3262B81A33500B0B76B /* MeTableViewCell.swift in Sources */,
 				254DB3082B78680B00B0B76B /* EnumType.swift in Sources */,
 				2528326A2B9BFF0300746AD9 /* ServiceViewController.swift in Sources */,

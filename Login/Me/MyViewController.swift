@@ -6,10 +6,14 @@
 //
 
 import UIKit
-
+enum StoryBoardName: String {
+    case service = "Service"
+    case cardBag = "CardBag"
+}
 class MyViewController: UIViewController {
-
+    // MARK: - Outlet
     @IBOutlet weak var mainTableView: UITableView!
+    // MARK: - Varibles
     let service = [
         MyPageMessage(showMsg: "服务", imageString: "service")
     ]
@@ -23,7 +27,7 @@ class MyViewController: UIViewController {
     let settingMsg = [
         MyPageMessage(showMsg: "设置", imageString: "setting")
     ]
-    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         mainTableView.delegate = self
@@ -40,8 +44,16 @@ class MyViewController: UIViewController {
         alertController.addAction(action)
         self.present(alertController, animated: true)
     }
+    
+    func moveToNextPage(name: StoryBoardName) {
+        let storyBoard = UIStoryboard(name: name.rawValue, bundle: nil)
+        let viewController = storyBoard.instantiateViewController(identifier: name.rawValue)
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
 extension MyViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
@@ -92,17 +104,19 @@ extension MyViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 1 {
             switch indexPath.row {
             case 0:
-                let storyBoard = UIStoryboard(name: "Service", bundle: nil)
-                let viewController = storyBoard.instantiateViewController(identifier: "Service") as! ServiceViewController
-                viewController.hidesBottomBarWhenPushed = true
-                navigationController?.pushViewController(viewController, animated: true)
+                moveToNextPage(name: .service)
             default:
                 break
             }
-        } else {
-            Netmanager().commonNet(category: .anger)
         }
-        
+        if indexPath.section == 2 {
+            switch indexPath.row {
+            case 2:
+                moveToNextPage(name: .cardBag)
+            default:
+                break
+            }
+        }
     }
     // 设置footerView
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

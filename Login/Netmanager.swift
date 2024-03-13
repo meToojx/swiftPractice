@@ -12,7 +12,7 @@ struct Quote: Codable {
     let author: String
     let category: String
 }
-enum QuoteCategory: String {
+enum QuoteCategory: String, CaseIterable {
     case age
     case alone
     case amazing
@@ -83,7 +83,7 @@ enum QuoteCategory: String {
 }
 
 class Netmanager {
-    func commonNet(category: QuoteCategory) {
+    func commonNet(category: QuoteCategory,  onComplete: @escaping (Quote) -> Void) {
         let category = category.rawValue.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         let url = URL(string: "https://api.api-ninjas.com/v1/quotes?category="+category!)!
         var request = URLRequest(url: url)
@@ -94,6 +94,7 @@ class Netmanager {
                 // 将data类型转换成自建模型
                 let responseMsg = try JSONDecoder().decode([Quote].self, from: data)
                 print(responseMsg)
+                onComplete(responseMsg[0])
             } catch {
                 print(error.localizedDescription)
             }
