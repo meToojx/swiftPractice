@@ -14,6 +14,8 @@ class CardBagViewController: UIViewController {
     
     let showPickerVIew: UIPickerView = UIPickerView()
     
+    let userDefaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -21,12 +23,28 @@ class CardBagViewController: UIViewController {
     
     
     @IBAction func getAction(_ sender: UIButton) {
+        // 收回键盘
+        self.view.endEditing(true)
+        // 显示加载
+        self.showIndicatorView()
+        // 获得种类
         let textInTextField = showTextField.text ?? ""
+        // 得到对应case
         let quoteCase = QuoteCategory(rawValue: textInTextField)
-        guard let realQuoteCase = quoteCase else { return }
+        // 拆包 case？ -> case
+        guard let realQuoteCase = quoteCase else {
+            // 停止显示加载动画
+            self.stopShowIndicatorView()
+            return
+        }
+        // 通信获取数据
         Netmanager().commonNet(category: realQuoteCase, onComplete: {value in
+            // 回到主线程
             DispatchQueue.main.async {
-                self.presentAction(showMsg:  value.quote)
+                // 停止显示加载动画
+                self.stopShowIndicatorView()
+                // 弹出弹窗
+                self.presentAction(showMsg: value)
             }
         })
     }
@@ -47,17 +65,35 @@ class CardBagViewController: UIViewController {
         showTextField.inputView = showPickerVIew
         
     }
-    func presentAction(showMsg: String) {
-        let alertController = UIAlertController(title: showMsg, message: nil, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default) { _ in
-            print("点击了Ok按键")
+    func presentAction(showMsg: Quote) {
+        let alertController = UIAlertController(title: showMsg.quote, message: nil, preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+            // 保存数据
+            self.saveData(newQuote: showMsg)
         }
-        let baction = UIAlertAction(title: "off", style: .cancel)
-        let caction = UIAlertAction(title: "third", style: .destructive)
-        alertController.addAction(action)
-        alertController.addAction(baction)
-        alertController.addAction(caction)
+        let cancelAaction = UIAlertAction(title: "cancel", style: .cancel)
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAaction)
         present(alertController, animated: true)
+    }
+    
+    func saveData(newQuote: Quote) {
+        // 新建数组 用来放旧的数组
+        let saveKey = "quotes"
+        var extistedGroup: [UseQuote] = []
+        guard let realData = userDefaults.getDecode(key: saveKey, asType: [UseQuote].self) else {
+            // 如果之前没保存过数据
+            // 放入userDefaults
+            extistedGroup.append(UseQuote(quoteMsg: newQuote))
+            userDefaults.setEncode(key: saveKey, value: extistedGroup)
+            return
+        }
+        // 如果之前保存过数据 则取出旧数据
+        extistedGroup = realData
+        print("已经存在了\(extistedGroup.count)条数据")
+        extistedGroup.append(UseQuote(quoteMsg: newQuote))
+        // 放入userDefaults
+        userDefaults.setEncode(key: saveKey, value: extistedGroup)
     }
 }
 

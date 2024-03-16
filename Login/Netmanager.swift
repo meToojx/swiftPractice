@@ -12,6 +12,12 @@ struct Quote: Codable {
     let author: String
     let category: String
 }
+
+struct UseQuote: Codable {
+    let quoteMsg: Quote
+    var isFaviorate: Bool = false
+}
+
 enum QuoteCategory: String, CaseIterable {
     case age
     case alone
