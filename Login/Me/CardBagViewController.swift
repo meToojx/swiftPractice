@@ -44,7 +44,8 @@ class CardBagViewController: UIViewController {
                 // 停止显示加载动画
                 self.stopShowIndicatorView()
                 // 弹出弹窗
-                self.presentAction(showMsg: value)
+//                self.presentAction(showMsg: value)
+                self.presentCustomAlertView(newQuote: UseQuote(quoteMsg: value))
             }
         })
     }
@@ -75,6 +76,12 @@ class CardBagViewController: UIViewController {
         alertController.addAction(saveAction)
         alertController.addAction(cancelAaction)
         present(alertController, animated: true)
+    }
+    
+    func presentCustomAlertView(newQuote: UseQuote) {
+        let customAlert = CustomAlertViewController()
+        customAlert.quotesMessage = newQuote
+        customAlert.showAler()
     }
     
     func saveData(newQuote: Quote) {

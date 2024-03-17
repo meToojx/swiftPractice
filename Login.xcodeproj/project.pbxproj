@@ -43,6 +43,12 @@
 		258399B22BA1BFE80037D7E3 /* CardBag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258399B12BA1BFE80037D7E3 /* CardBag.storyboard */; };
 		258399BD2BA52CA80037D7E3 /* Ex+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258399BC2BA52CA80037D7E3 /* Ex+UIViewController.swift */; };
 		258399C02BA574280037D7E3 /* Ex+UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258399BF2BA574280037D7E3 /* Ex+UserDefault.swift */; };
+		258399C22BA67AE40037D7E3 /* QutoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258399C12BA67AE40037D7E3 /* QutoCollectionViewController.swift */; };
+		258399C42BA67AF80037D7E3 /* Collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258399C32BA67AF80037D7E3 /* Collection.storyboard */; };
+		258399C72BA67DE90037D7E3 /* SingleQuoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 258399C62BA67DE90037D7E3 /* SingleQuoteTableViewCell.xib */; };
+		258399C82BA67DE90037D7E3 /* SingleQuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258399C52BA67DE90037D7E3 /* SingleQuoteTableViewCell.swift */; };
+		258399CC2BA6B1D50037D7E3 /* CustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 258399CB2BA6B1D50037D7E3 /* CustomAlertViewController.xib */; };
+		258399CD2BA6B1D50037D7E3 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258399CA2BA6B1D50037D7E3 /* CustomAlertViewController.swift */; };
 		25AE9A4C2B9405DC004A3BA5 /* FriendDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AE9A4B2B9405DC004A3BA5 /* FriendDetailCell.swift */; };
 		25AE9A4F2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AE9A4D2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.swift */; };
 		25AE9A502B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25AE9A4E2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib */; };
@@ -110,6 +116,12 @@
 		258399B12BA1BFE80037D7E3 /* CardBag.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardBag.storyboard; sourceTree = "<group>"; };
 		258399BC2BA52CA80037D7E3 /* Ex+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIViewController.swift"; sourceTree = "<group>"; };
 		258399BF2BA574280037D7E3 /* Ex+UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UserDefault.swift"; sourceTree = "<group>"; };
+		258399C12BA67AE40037D7E3 /* QutoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QutoCollectionViewController.swift; sourceTree = "<group>"; };
+		258399C32BA67AF80037D7E3 /* Collection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Collection.storyboard; sourceTree = "<group>"; };
+		258399C52BA67DE90037D7E3 /* SingleQuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleQuoteTableViewCell.swift; sourceTree = "<group>"; };
+		258399C62BA67DE90037D7E3 /* SingleQuoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleQuoteTableViewCell.xib; sourceTree = "<group>"; };
+		258399CA2BA6B1D50037D7E3 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
+		258399CB2BA6B1D50037D7E3 /* CustomAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlertViewController.xib; sourceTree = "<group>"; };
 		25AE9A4B2B9405DC004A3BA5 /* FriendDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailCell.swift; sourceTree = "<group>"; };
 		25AE9A4D2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFriendDetailTableViewCell.swift; sourceTree = "<group>"; };
 		25AE9A4E2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteFriendDetailTableViewCell.xib; sourceTree = "<group>"; };
@@ -178,6 +190,7 @@
 		254DB2CE2B76EF0800B0B76B /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				258399C92BA6B19E0037D7E3 /* CustomItem */,
 				258399BE2BA52CB10037D7E3 /* Extension */,
 				254DB33C2B92FEB500B0B76B /* Protocol */,
 				254DB32E2B898E6500B0B76B /* Friend */,
@@ -264,6 +277,10 @@
 				2528326D2B9C2B7D00746AD9 /* ShowWeb.storyboard */,
 				258399AF2BA1BFD30037D7E3 /* CardBagViewController.swift */,
 				258399B12BA1BFE80037D7E3 /* CardBag.storyboard */,
+				258399C12BA67AE40037D7E3 /* QutoCollectionViewController.swift */,
+				258399C32BA67AF80037D7E3 /* Collection.storyboard */,
+				258399C52BA67DE90037D7E3 /* SingleQuoteTableViewCell.swift */,
+				258399C62BA67DE90037D7E3 /* SingleQuoteTableViewCell.xib */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -299,6 +316,15 @@
 				258399BF2BA574280037D7E3 /* Ex+UserDefault.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		258399C92BA6B19E0037D7E3 /* CustomItem */ = {
+			isa = PBXGroup;
+			children = (
+				258399CA2BA6B1D50037D7E3 /* CustomAlertViewController.swift */,
+				258399CB2BA6B1D50037D7E3 /* CustomAlertViewController.xib */,
+			);
+			path = CustomItem;
 			sourceTree = "<group>";
 		};
 		51F3392E6C48A612916ACDD8 /* Frameworks */ = {
@@ -433,12 +459,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				258399C42BA67AF80037D7E3 /* Collection.storyboard in Resources */,
 				252832682B9BFEE000746AD9 /* Service.storyboard in Resources */,
+				258399CC2BA6B1D50037D7E3 /* CustomAlertViewController.xib in Resources */,
 				254DB3272B81A33500B0B76B /* MeTableViewCell.xib in Resources */,
 				258399B22BA1BFE80037D7E3 /* CardBag.storyboard in Resources */,
 				254DB3342B898EAA00B0B76B /* FriendTableViewCell.xib in Resources */,
 				254DB2DC2B76EF0A00B0B76B /* LaunchScreen.storyboard in Resources */,
 				2528326E2B9C2B7D00746AD9 /* ShowWeb.storyboard in Resources */,
+				258399C72BA67DE90037D7E3 /* SingleQuoteTableViewCell.xib in Resources */,
 				254DB2D92B76EF0A00B0B76B /* Assets.xcassets in Resources */,
 				254DB3392B921ED100B0B76B /* FriendDetailViewController.storyboard in Resources */,
 				25AE9A502B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.xib in Resources */,
@@ -574,9 +603,11 @@
 				254DB30E2B7CDB7300B0B76B /* CanScrollViewController.swift in Sources */,
 				254DB3062B7867D700B0B76B /* Model.swift in Sources */,
 				254DB3302B898E7D00B0B76B /* FriendViewController.swift in Sources */,
+				258399CD2BA6B1D50037D7E3 /* CustomAlertViewController.swift in Sources */,
 				254DB31A2B80727400B0B76B /* MainChatListTableViewCell.swift in Sources */,
 				258399BD2BA52CA80037D7E3 /* Ex+UIViewController.swift in Sources */,
 				258399C02BA574280037D7E3 /* Ex+UserDefault.swift in Sources */,
+				258399C22BA67AE40037D7E3 /* QutoCollectionViewController.swift in Sources */,
 				254DB3002B76EFB900B0B76B /* LoginViewController.swift in Sources */,
 				25AE9A4F2B94170A004A3BA5 /* DeleteFriendDetailTableViewCell.swift in Sources */,
 				25AE9A522B9447DB004A3BA5 /* ImageCollectionViewCell.swift in Sources */,
@@ -590,6 +621,7 @@
 				254DB31D2B8083E100B0B76B /* ConnectTableViewCell.swift in Sources */,
 				2528326C2B9C2B6F00746AD9 /* ShowWebViewController.swift in Sources */,
 				254DB33B2B921EE900B0B76B /* FriendDetailViewController.swift in Sources */,
+				258399C82BA67DE90037D7E3 /* SingleQuoteTableViewCell.swift in Sources */,
 				25AE9A4C2B9405DC004A3BA5 /* FriendDetailCell.swift in Sources */,
 				254DB3042B772FF800B0B76B /* CalculatorViewController.swift in Sources */,
 				258399AA2B9CAB8D0037D7E3 /* Netmanager.swift in Sources */,

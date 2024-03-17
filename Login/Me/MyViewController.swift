@@ -9,6 +9,7 @@ import UIKit
 enum StoryBoardName: String {
     case service = "Service"
     case cardBag = "CardBag"
+    case collection = "Collection"
 }
 class MyViewController: UIViewController {
     // MARK: - Outlet
@@ -113,6 +114,8 @@ extension MyViewController: UITableViewDelegate, UITableViewDataSource {
             switch indexPath.row {
             case 2:
                 moveToNextPage(name: .cardBag)
+            case 4:
+                moveToNextPage(name: .collection)
             default:
                 break
             }

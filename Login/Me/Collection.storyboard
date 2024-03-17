@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quto Collection View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Collection" id="Y6W-OH-hqX" customClass="QutoCollectionViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Rfn-kS-PfT">
+                                <rect key="frame" x="100" y="59" width="193" height="32"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="Like"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeSegmentAction:" destination="Y6W-OH-hqX" eventType="valueChanged" id="W2Q-Zr-CyU"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esp-N3-Fyp">
+                                <rect key="frame" x="30" y="90" width="363" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="YXc-nZ-zA0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Gu-lM-rNB">
+                                <rect key="frame" x="0.0" y="170" width="393" height="682"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rfn-kS-PfT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="9Ib-T1-19n"/>
+                            <constraint firstItem="9Gu-lM-rNB" firstAttribute="top" secondItem="esp-N3-Fyp" secondAttribute="bottom" id="9bN-rp-RVS"/>
+                            <constraint firstItem="esp-N3-Fyp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Kok-el-LY6"/>
+                            <constraint firstItem="Rfn-kS-PfT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="McF-rH-wsg"/>
+                            <constraint firstItem="9Gu-lM-rNB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="NxO-Cb-0LK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="esp-N3-Fyp" secondAttribute="trailing" id="X7B-An-YzT"/>
+                            <constraint firstItem="Rfn-kS-PfT" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Xl5-rJ-c8Z"/>
+                            <constraint firstItem="esp-N3-Fyp" firstAttribute="top" secondItem="Rfn-kS-PfT" secondAttribute="bottom" id="gid-0l-N0z"/>
+                            <constraint firstAttribute="bottom" secondItem="9Gu-lM-rNB" secondAttribute="bottom" id="oSD-sw-MGr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9Gu-lM-rNB" secondAttribute="trailing" id="vEu-M2-p2T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changeSegmentController" destination="Rfn-kS-PfT" id="wT6-8B-EbS"/>
+                        <outlet property="qutoTableview" destination="9Gu-lM-rNB" id="iB2-oZ-pqF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
